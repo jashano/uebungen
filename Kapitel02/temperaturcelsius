@@ -1,0 +1,25 @@
+class Temperatur():
+    def __init__ (self,c=0):
+        self.c=c
+
+    def __str__(self):
+        return f"{self.c} °C"
+    
+    def __gt__(self,other):
+        return self.c > other.c
+    
+    def __lt__(self,other):
+        return self.c < other.c
+
+    def __eq__(self,other):
+        return self.c == other.c
+    
+t0=Temperatur(10)
+t1=Temperatur(10)
+
+if t1 > t0:
+    print("Nächste Woche ist wärmer")
+elif t1 < t0:
+    print("Nächst Woche ist kälter")
+else:
+    print("Nächste Woche ist die Temperatur gleich")
