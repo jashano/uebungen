@@ -1,5 +1,3 @@
-# conda install pyqt -y
-
 import sys
 from PyQt5.QtWidgets import *
 
@@ -7,13 +5,24 @@ from PyQt5.QtWidgets import *
 class MyWindow(QMainWindow):
     def __init__(self):      # Konstruktor
         super().__init__()   # Konstruktor Basis-Klasse
-
-        #self.setGeometry(10,10,640,480)
-        self.setMinimumWidth(640)
-        self.setMinimumHeight(480)
-
         self.setWindowTitle("Hello World")  # Fenster-Titel setzen
         self.show()  # Fenster anzeigen/sichtbar machen
+
+        menubar = self.menuBar()
+        filemenu = menubar.addMenu("File")
+        editmenu = menubar.addMenu("Edit")
+        viewmenu = menubar.addMenu("View")
+
+        open = QAction("Open", self)
+        save = QAction("Save", self)
+        quit = QAction("Quit", self)
+
+        quit.setMenuRole(QAction.QuitRole)   # Rolle "beenden" zuweisen, nur für MacOS relevant
+
+        filemenu.addAction(open)
+        filemenu.addAction(save)
+        filemenu.addSeparator()
+        filemenu.addAction(quit)
 
 def main():
     app = QApplication(sys.argv)  # Qt Applikation erstellen
@@ -23,3 +32,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
