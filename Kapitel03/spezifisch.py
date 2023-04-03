@@ -1,6 +1,10 @@
 from figur import *
 from math import *
 
+p1=None
+p2=None
+p3=None
+
 class Punkt(Figur):
     def __init__(self,x=0,y=0):
         super().__init__("Punkt")
@@ -15,7 +19,7 @@ def dist(p1,p2):
 
 class Dreieck(Figur):
     def __init__(self, p1, p2, p3):
-        self.name = "Dreieck"
+        super().__init__("Dreieck")
         self.p1=p1
         self.p2=p2
         self.p3=p3
@@ -23,20 +27,26 @@ class Dreieck(Figur):
     def Umfang(self):
         return dist(self.p1,self.p2)+dist(self.p2,self.p3)+dist(self.p1,self.p3)
     
+    def flaeche(self):
+        return 1/2*abs((self.p2.x-self.p1.x)*(self.p3.y-self.p1.y)-(self.p3.x-self.p1.x)*(self.p2.y-self.p1.y))
+    
     def __str__(self):
-        return self.name + f" mit {p1}, {p2} und {p3}"
+        return self.name + f" mit {self.p1}, {self.p2} und {self.p3}"
     
 class Rechteck(Figur):
     def __init__(self,p1, p2):
-        self.name = "Rechteck"
+        super().__init__("Rechteck")
         self.p1=p1
         self.p2=p2
         
     def Umfang(self):
-        return 2*(abs(p2.x-p1.x))+2*(abs(p2.y-p1.y))
+        return 2*(abs(self.p2.x-self.p1.x))+2*(abs(self.p2.y-self.p1.y))
+    
+    def flaeche(self):
+        return abs(self.p2.x-self.p1.x)*abs(self.p2.y-self.p1.y)
     
     def __str__(self):
-        return self.name + f" mit {p1} und {p2}"
+        return self.name + f" mit {self.p1} und {self.p2}"
     
 class Kreis(Figur):
     def __init__(self,mittelpunkt=Punkt(0,0),radius=0):
@@ -45,17 +55,17 @@ class Kreis(Figur):
         self.radius=radius
         
     def Umfang(self):
-        return 2 * math.pi * self.r
+        return 2 * pi * self.r
     
     def flaeche(self):
-        return self.radius**2 * math.pi
+        return self.radius**2 * pi
     
     def __str__(self):
         return self.name + f"mit M={self.m}, r={self.r}"
     
 class Polygon(Figur):
     def __init__(self,*punkte):
-        self.name = "Polygon"
+        super().__init__("Polygon")
         self.punkte=list(punkte)
         
     def Umfang(self):
