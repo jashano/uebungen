@@ -1,0 +1,3 @@
+Eberhard,Neuenhauer,14/02/2001,Katzenklo 1,56309,Güterslos,Österreich
+Franz,Beckenklauer,01/11/1919,Erfinderweg 123,Kitzböhl,,Deutschland
+Margrit,Hollawaldfee,03/01/1975,Baumstrasse 04,4691,Muttenz,Schweiz
