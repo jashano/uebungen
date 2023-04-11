@@ -1,0 +1,46 @@
+Peter,Hohler,03/10/2012,4600,Olten,Römerweg 1,Schweiz
+Peter,Heinz,03/10/2012,4600,Olten,Römerweg 1,Schweiz
+Karl,Heinz,03/10/2012,4600,Olten,Römerweg 1,Schweiz
+Eberhard,Neuenhauer,14/02/2001,Katzenklo 1,56309,Güterslos,Österreich
+Franz,Beckenklauer,01/11/1919,Erfinderweg 123,Kitzböhl,,Deutschland
+Margrit,Hollawaldfee,03/01/1975,Baumstrasse 04,4691,Muttenz,Schweiz
+Anna,Bergmann,20/05/1995,74523,Kirchberg,Am Kirchberg 1,Deutschland
+Ben,Schmidt,01/12/1987,70174,Stuttgart,Olgastraße 57,Deutschland
+Carla,Meier,13/08/1999,50667,Köln,Hohenzollernring 88,Deutschland
+David,Wagner,28/02/1978,60594,Frankfurt am Main,Kreuznacher Straße 58,Deutschland
+Emma,Müller,10/11/1991,10117,Berlin,Unter den Linden 13,Deutschland
+Felix,Klein,23/06/1984,20095,Hamburg,Rathausmarkt 1,Deutschland
+Greta,Becker,17/03/1997,81667,München,Rosenheimer Platz 1,Deutschland
+Hans,Schäfer,05/09/1975,90402,Nürnberg,Königstraße 39,Deutschland
+Isabel,Bauer,02/04/1988,60311,Frankfurt am Main,Zeil 106,Deutschland
+Jan,Hoffmann,15/01/1993,40213,Düsseldorf,Königsallee 60,Deutschland
+Lukas,Moser,18/09/1980,8010,Graz,Kaiserfeldgasse 1,Österreich
+Sabine,Kern,26/07/1995,4020,Linz,Landstraße 28,Österreich
+Sven,Schwarz,03/05/1990,4055,Basel,Spalenring 146,Schweiz
+Sandra,Graf,12/12/1982,8006,Zürich,Bleicherweg 12,Schweiz
+Oliver,Keller,07/06/1973,1010,Wien,Schwarzenbergplatz 5,Österreich
+Sophie,Huber,25/08/1999,3000,Bern,Münstergasse 58,Schweiz
+Markus,Fuchs,14/03/1987,8001,Zürich,Bahnhofstrasse 7,Schweiz
+Miriam,Weiss,09/11/1992,6020,Innsbruck,Salurner Straße 15,Österreich
+Nina,Mayer,06/02/1985,9000,St. Gallen,Mühlentalstrasse 1,Schweiz
+Andreas,Bach,19/07/1998,1010,Wien,Kärntner Ring 5,Österreich
+Anna,Bergmann,20/05/1995,74523,Kirchberg,Am Kirchberg 1,Deutschland
+Ben,Schmidt,01/12/1987,70174,Stuttgart,Olgastraße 57,Deutschland
+Carla,Meier,13/08/1999,50667,Köln,Hohenzollernring 88,Deutschland
+David,Wagner,28/02/1978,60594,Frankfurt am Main,Kreuznacher Straße 58,Deutschland
+Emma,Müller,10/11/1991,10117,Berlin,Unter den Linden 13,Deutschland
+Felix,Klein,23/06/1984,20095,Hamburg,Rathausmarkt 1,Deutschland
+Greta,Becker,17/03/1997,81667,München,Rosenheimer Platz 1,Deutschland
+Hans,Schäfer,05/09/1975,90402,Nürnberg,Königstraße 39,Deutschland
+Isabel,Bauer,02/04/1988,60311,Frankfurt am Main,Zeil 106,Deutschland
+Jan,Hoffmann,15/01/1993,40213,Düsseldorf,Königsallee 60,Deutschland
+Lukas,Moser,18/09/1980,8010,Graz,Kaiserfeldgasse 1,Österreich
+Sabine,Kern,26/07/1995,4020,Linz,Landstraße 28,Österreich
+Sven,Schwarz,03/05/1990,4055,Basel,Spalenring 146,Schweiz
+Sandra,Graf,12/12/1982,8006,Zürich,Bleicherweg 12,Schweiz
+Oliver,Keller,07/06/1973,1010,Wien,Schwarzenbergplatz 5,Österreich
+Sophie,Huber,25/08/1999,3000,Bern,Münstergasse 58,Schweiz
+Markus,Fuchs,14/03/1987,8001,Zürich,Bahnhofstrasse 7,Schweiz
+Miriam,Weiss,09/11/1992,6020,Innsbruck,Salurner Straße 15,Österreich
+Nina,Mayer,06/02/1985,9000,St. Gallen,Mühlentalstrasse 1,Schweiz
+Andreas,Bach,19/07/1998,1010,Wien,Kärntner Ring 5,Österreich
