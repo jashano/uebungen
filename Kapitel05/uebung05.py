@@ -71,8 +71,12 @@ class MyWindow(QMainWindow):
         filemenu1 = menubar.addMenu("View")
 
         save = QAction("Speichern", self)
+        load = QAction("Laden",self)
         quit = QAction("Beenden", self)
         karte = QAction("Karte", self)
+
+        load.setShortcut('Ctrl+O')
+        load.triggered.connect(self.dateiladen)
 
         save.setShortcut('Ctrl+S')
         save.triggered.connect(self.speichern)
@@ -85,6 +89,7 @@ class MyWindow(QMainWindow):
         karte.setShortcut('Ctrl+M')
 
         filemenu.addAction(save)
+        filemenu.addAction(load)
         filemenu.addAction(quit)
         filemenu1.addAction(karte)
 
@@ -137,29 +142,48 @@ class MyWindow(QMainWindow):
 
     def dateiladen(self):
         location = QStandardPaths.writableLocation(QStandardPaths.DocumentsLocation)
-        filename, filter = QFileDialog.getOpenFileName(self,"Datei öffnen",location,"Text (*.txt)")
-        if (filename != ""):
-        # Inhalt der Datei lesen
-            with open(filename, "r", encoding="utf-8") as file:
-              fileContent = file.read()
+        filename, filter = QFileDialog.getOpenFileName(self,"Datei öffnen",location,"txt-Dateien (*.txt)")
+        if (filename != ""):       
+            file = open(filename, "r", encoding="utf-8")
+            data = file.readline().strip().split(",")
+            loadVorname, loadNachname, loadGeburtsdatum, loadStrasse, loadPlz, loadOrt, loadLand = data
 
-            # Inhalt in QTextEdit anzeigen
-            textEdit = QTextEdit()
-            textEdit.setText(fileContent)
+            date_parts = loadGeburtsdatum.split("/")
+            date = QDate(int(date_parts[2]), int(date_parts[1]), int(date_parts[0]))
 
-            # QDialog erstellen und QTextEdit als zentrales Widget setzen
-            dialog = QDialog(self)
-            layout = QVBoxLayout()
-            layout.addWidget(textEdit)
-            dialog.setLayout(layout)
+            self.vornameLineEdit.setText(loadVorname)
+            self.nameLineEdit.setText(loadNachname)
+            self.birthdayEdit.setDate(date)
+            self.adresseLineEdit.setText(loadStrasse)
+            self.plzLineEdit.setText(loadPlz)
+            self.ortLineEdit.setText(loadOrt)
+            self.countryEdit.setCurrentText(loadLand)
+            file.close()
+    # def dateiladenimfensteranzeigen(self):
+    #     location = QStandardPaths.writableLocation(QStandardPaths.DocumentsLocation)
+    #     filename, filter = QFileDialog.getOpenFileName(self,"Datei öffnen",location,"Text (*.txt)")
+    #     if (filename != ""):
+    #     # Inhalt der Datei lesen
+    #         with open(filename, "r", encoding="utf-8") as file:
+    #           fileContent = file.read()
 
-            #Fenstergestaltung
-            dialog.setWindowTitle(filename)
-            dialog.setMinimumWidth(800)
-            dialog.setMinimumHeight(420)
+    #         # Inhalt in QTextEdit anzeigen
+    #         textEdit = QTextEdit()
+    #         textEdit.setText(fileContent)
 
-            # Dialog anzeigen
-            dialog.exec_()
+    #         # QDialog erstellen und QTextEdit als zentrales Widget setzen
+    #         dialog = QDialog(self)
+    #         layout = QVBoxLayout()
+    #         layout.addWidget(textEdit)
+    #         dialog.setLayout(layout)
+
+    #         #Fenstergestaltung
+    #         dialog.setWindowTitle(filename)
+    #         dialog.setMinimumWidth(800)
+    #         dialog.setMinimumHeight(420)
+
+    #         # Dialog anzeigen
+    #         dialog.exec_()
 
 # -----------------------------------------------------------------------------
 
