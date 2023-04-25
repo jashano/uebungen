@@ -13,16 +13,16 @@ class Flachdach(Dachform):
         self.begruenung = begruenung
 
     def __str__(self):
-        return f"{super().__str__()} und {begruenung}"
+        return f"Flachdach aus {super().__str__()} und Begrünung = {self.begruenung}"
 
 
-class Schrägdach(Dachform):
+class Schraegdach(Dachform):
     def __init__(self, material, farbe, winkel):
         super().__init__(material, farbe)
         self.winkel = winkel
 
-    def beschreibung(self):
-        return f"{super().__str__()} und einem Neigungswinkel von {self.winkel} Grad"
+    def __str__(self):
+        return f"Schrägdach aus {super().__str__()} und einem Neigungswinkel von {self.winkel} Grad"
 
 
 class Satteldach(Dachform):
@@ -30,5 +30,13 @@ class Satteldach(Dachform):
         super().__init__(material, farbe)
         self.winkel = winkel
 
-    def beschreibung(self):
-        return f"{super().__self__()} und einem Satteldach mit einem Neigungswinkel von {self.winkel} Grad"
+    def __str__(self):
+        return f"Satteldach {super().__str__()} und einem Satteldach mit einem Neigungswinkel von {self.winkel} Grad"
+
+flachdach = Flachdach("Beton", "Grau", True)
+schraegdach = Schraegdach("Ziegel", "Rot", 45)
+satteldach = Satteldach("Holz", "Braun", 30)
+
+print(flachdach)
+print(schraegdach)
+print(satteldach)

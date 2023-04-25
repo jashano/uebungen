@@ -6,10 +6,11 @@ class MyWindow(QMainWindow):
         super().__init__()
 
         # Fenster-Titel definieren:
-        self.setWindowTitle("Kalender")
+        self.setWindowTitle("Fenster")
 
         # Layout erstellen:
         layout = QVBoxLayout()
+        layout_bottom = QHBoxLayout()
 
         # Widget-Instanzen erstellen:
         label = QLabel("Ist dieses Datum in Ordnung?")
@@ -22,7 +23,12 @@ class MyWindow(QMainWindow):
 
         layout.addWidget(calendar)
         layout.addWidget(label)
-        layout.addWidget(button)
+
+        layout.addLayout(layout_bottom)
+        
+        layout_bottom.addWidget(button1)
+        layout_bottom.addWidget(button2)
+        layout_bottom.addWidget(button3)
 
         # Zentrales Widget erstellen und layout hinzufügen
         center = QWidget()
